@@ -1,6 +1,5 @@
 
 # Test Script 1: Student Login
-# Application: AttendX Student Attendance App
 
 def test_valid_login():
     username = "student01"
@@ -12,5 +11,16 @@ def test_valid_login():
         print("FAIL: Valid student login")
 
 
+def test_invalid_login():
+    username = "wrong_user"
+    password = "wrong_password"
+
+    if username != "student01" or password != "Student@123":
+        print("PASS: Invalid login is rejected")
+    else:
+        print("FAIL: Invalid login is accepted")
+
+
 if __name__ == "__main__":
     test_valid_login()
+    test_invalid_login()
